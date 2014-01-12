@@ -1,0 +1,558 @@
+@charset "UTF-8";
+/* line 5, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.0.alpha.13/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.0.alpha.13/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.0.alpha.13/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.0.alpha.13/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.0.alpha.13/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.0.alpha.13/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.0.alpha.13/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.0.alpha.13/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.0.alpha.13/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+/*********** Base rules ****************/
+/* Sets up the Base 10 stuff */
+/*********** Layout rules ***********/
+/******** Module rules ****************/
+/******** Content specific vars ***************/
+/*
+  Taken from: http://foundation.zurb.com/docs/media-queries.html
+  Vars renamed for better understanding
+*/
+/* The breakpoints */
+/* The breakpoints */
+/*
+   Foundation Visibility Classes
+*/
+/* line 6, ../sass/lib/_visibility.scss */
+.show-for-mobile,
+.show-for-mobile-only,
+.show-for-tablet-down,
+.show-for-desktop-down,
+.hide-for-tablet,
+.hide-for-tablet-up,
+.hide-for-tablet-only,
+.hide-for-desktop,
+.hide-for-desktop-up,
+.hide-for-desktop-only,
+.hide-for-xdesktop,
+.hide-for-xdesktop-up,
+.hide-for-xdesktop-only {
+  display: inherit !important;
+}
+
+/* line 20, ../sass/lib/_visibility.scss */
+.hide-for-mobile,
+.hide-for-mobile-only,
+.hide-for-tablet-down,
+.show-for-tablet,
+.show-for-tablet-up,
+.show-for-tablet-only,
+.hide-for-desktop-down,
+.show-for-desktop,
+.show-for-desktop-up,
+.show-for-desktop-only,
+.show-for-xdesktop,
+.show-for-xdesktop-up,
+.show-for-xdesktop-only {
+  display: none !important;
+}
+
+/* Tablet Displays: 641px and up */
+@media only screen and (min-width: 40.063em) {
+  /* line 36, ../sass/lib/_visibility.scss */
+  .hide-for-mobile,
+  .hide-for-mobile-only,
+  .show-for-tablet,
+  .show-for-tablet-down,
+  .show-for-tablet-up,
+  .show-for-tablet-only,
+  .hide-for-desktop,
+  .hide-for-desktop-up,
+  .hide-for-desktop-only,
+  .hide-for-xdesktop,
+  .hide-for-xdesktop-up,
+  .hide-for-xdesktop-only {
+    display: inherit !important;
+  }
+
+  /* line 49, ../sass/lib/_visibility.scss */
+  .show-for-mobile,
+  .show-for-mobile-only,
+  .hide-for-tablet,
+  .hide-for-tablet-down,
+  .hide-for-tablet-up,
+  .hide-for-tablet-only,
+  .hide-for-desktop-down,
+  .show-for-desktop,
+  .show-for-desktop-up,
+  .show-for-desktop-only,
+  .show-for-xdesktop,
+  .show-for-xdesktop-up,
+  .show-for-xdesktop-only {
+    display: none !important;
+  }
+}
+/* Desktop Displays: 1024px and up */
+@media only screen and (min-width: 64.063em) {
+  /* line 66, ../sass/lib/_visibility.scss */
+  .hide-for-mobile,
+  .hide-for-mobile-only,
+  .hide-for-tablet,
+  .hide-for-tablet-down,
+  .hide-for-tablet-only,
+  .show-for-tablet-up,
+  .show-for-desktop,
+  .show-for-desktop-up,
+  .show-for-desktop-only,
+  .hide-for-xdesktop,
+  .hide-for-xdesktop-up,
+  .hide-for-xdesktop-only {
+    display: inherit !important;
+  }
+
+  /* line 79, ../sass/lib/_visibility.scss */
+  .show-for-mobile-only,
+  .show-for-tablet,
+  .show-for-tablet-down,
+  .show-for-tablet-only,
+  .hide-for-desktop,
+  .hide-for-desktop-up,
+  .hide-for-desktop-only,
+  .show-for-xdesktop,
+  .show-for-xdesktop-up,
+  .show-for-xdesktop-only {
+    display: none !important;
+  }
+}
+/* X-Desktop Displays: 1441 and up */
+@media only screen and (min-width: 90.063em) {
+  /* line 93, ../sass/lib/_visibility.scss */
+  .hide-for-mobile,
+  .hide-for-mobile-only,
+  .hide-for-tablet,
+  .hide-for-tablet-down,
+  .hide-for-tablet-only,
+  .show-for-tablet-up,
+  .show-for-desktop-up,
+  .show-for-xdesktop,
+  .show-for-xdesktop-up,
+  .show-for-xdesktop-only {
+    display: inherit !important;
+  }
+
+  /* line 104, ../sass/lib/_visibility.scss */
+  .show-for-mobile-only,
+  .show-for-tablet,
+  .show-for-tablet-down,
+  .show-for-tablet-only,
+  .show-for-desktop,
+  .show-for-desktop-only,
+  .show-for-desktop-down,
+  .hide-for-xdesktop,
+  .hide-for-xdesktop-up,
+  .hide-for-xdesktop-only {
+    display: none !important;
+  }
+}
+/* Orientation targeting */
+/* line 117, ../sass/lib/_visibility.scss */
+.show-for-landscape,
+.hide-for-portrait {
+  display: inherit !important;
+}
+
+/* line 119, ../sass/lib/_visibility.scss */
+.hide-for-landscape,
+.show-for-portrait {
+  display: none !important;
+}
+
+@media only screen and (orientation: landscape) {
+  /* line 124, ../sass/lib/_visibility.scss */
+  .show-for-landscape,
+  .hide-for-portrait {
+    display: inherit !important;
+  }
+
+  /* line 126, ../sass/lib/_visibility.scss */
+  .hide-for-landscape,
+  .show-for-portrait {
+    display: none !important;
+  }
+}
+@media only screen and (orientation: portrait) {
+  /* line 131, ../sass/lib/_visibility.scss */
+  .show-for-portrait,
+  .hide-for-landscape {
+    display: inherit !important;
+  }
+
+  /* line 133, ../sass/lib/_visibility.scss */
+  .hide-for-portrait,
+  .show-for-landscape {
+    display: none !important;
+  }
+
+  /* Touch-enabled device targeting */
+  /* line 137, ../sass/lib/_visibility.scss */
+  .show-for-touch {
+    display: none !important;
+  }
+
+  /* line 138, ../sass/lib/_visibility.scss */
+  .hide-for-touch {
+    display: inherit !important;
+  }
+
+  /* line 139, ../sass/lib/_visibility.scss */
+  .touch .show-for-touch {
+    display: inherit !important;
+  }
+
+  /* line 140, ../sass/lib/_visibility.scss */
+  .touch .hide-for-touch {
+    display: none !important;
+  }
+}
+/** Organisation of this file
+
+1) Base rules
+2) Layout rules
+3) Module rules
+4) State rules
+
+****/
+/*********** Base rules ***********/
+/** em -> rem convertion **/
+/* the values must be the px equivalent */
+/* Rewrite apply-container from sussy/grid line 50
+ to not add unnecessary padding */
+/* line 5, ../sass/images/_images_sources.scss */
+.logo {
+  background: url("http://pascalprecht.github.io/angular-translate/docs/en/img/logo/angular-translate-alternative/angular-translate_alternative_medium2.png") no-repeat top center;
+  height: 75px;
+  height: 7.5rem;
+}
+
+/* line 1, ../sass/base/_base.scss */
+* {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* line 6, ../sass/base/_base.scss */
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 12, ../sass/base/_base.scss */
+html, body {
+  min-height: 100%;
+  font-size: 10px;
+}
+
+/* line 17, ../sass/base/_base.scss */
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  color: #4d5357;
+  padding-bottom: 24px;
+}
+
+/* line 25, ../sass/base/_base.scss */
+p {
+  font-size: 16px;
+  line-height: 25px;
+}
+
+/* line 30, ../sass/base/_base.scss */
+a {
+  color: #5caed6;
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: 600;
+}
+/* line 36, ../sass/base/_base.scss */
+a:focus, a:hover, a:active {
+  color: #005580;
+  outline: none;
+  text-decoration: underline;
+}
+
+/* line 43, ../sass/base/_base.scss */
+h3 {
+  font-size: 2.5rem;
+  line-height: 1.36;
+}
+
+/* line 48, ../sass/base/_base.scss */
+h1,
+h2 {
+  font-size: 23px;
+  line-height: 40px;
+  font-weight: bold;
+}
+
+/* line 55, ../sass/base/_base.scss */
+.code-like-font,
+.posts span,
+.meta {
+  color: #aaa;
+  font-family: Monaco, "Courier New", monospace;
+  font-size: 80%;
+}
+
+/* line 63, ../sass/base/_base.scss */
+img,
+.logo {
+  height: auto;
+  max-width: 100%;
+}
+
+/* line 69, ../sass/base/_base.scss */
+pre {
+  display: block;
+  padding: 9.5px;
+  margin: 0 0 10px;
+  font-size: 13px;
+  line-height: 20px;
+  word-break: break-all;
+  word-wrap: break-word;
+  white-space: pre;
+  white-space: pre-wrap;
+  background-color: whitesmoke;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+}
+
+/* line 84, ../sass/base/_base.scss */
+button {
+  background: #5caed6;
+  border: 0;
+  color: #fff;
+  box-shadow: none;
+  text-shadow: none;
+  display: inline-block;
+  padding: 4px 12px;
+  margin-bottom: 0;
+  font-size: 16px;
+  line-height: 25px;
+  text-align: center;
+}
+/* line 96, ../sass/base/_base.scss */
+button:hover {
+  background: #005580;
+}
+
+/* line 101, ../sass/base/_base.scss */
+blockquote {
+  border: 0;
+  padding: 0;
+  position: relative;
+  margin-top: 12px;
+  background: whitesmoke;
+  padding: 20px;
+  border-radius: 8px;
+}
+/* line 109, ../sass/base/_base.scss */
+blockquote:before {
+  content: "“";
+  position: absolute;
+  font-size: 125px;
+  top: 14px;
+  left: -15px;
+  color: #5caed6;
+  letter-spacing: -10px;
+}
+
+/* line 1, ../sass/layout/_layout.scss */
+.content-section,
+header,
+footer {
+  *zoom: 1;
+  max-width: 59em;
+  _width: 59em;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2.4rem;
+}
+/* line 38, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.0.alpha.13/stylesheets/compass/utilities/general/_clearfix.scss */
+.content-section:after,
+header:after,
+footer:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* line 6, ../sass/layout/_layout.scss */
+.content-section:after,
+header:after,
+footer:after {
+  overflow: hidden;
+  *zoom: 1;
+}
+
+/* line 11, ../sass/layout/_layout.scss */
+nav li {
+  display: inline;
+}
+
+/* line 15, ../sass/layout/_layout.scss */
+header {
+  margin: 2.4rem auto;
+}
+
+/*************** Header ***************/
+/* line 22, ../sass/layout/_layout.scss */
+.header .logo {
+  margin-bottom: 1rem;
+}
+
+/************** Content *****************/
+/* line 29, ../sass/layout/_layout.scss */
+.posts {
+  list-style-type: none;
+  margin-bottom: 2rem;
+}
+
+/* line 34, ../sass/layout/_layout.scss */
+.posts li {
+  line-height: 1.75rem;
+}
+
+/* line 39, ../sass/layout/_layout.scss */
+.post {
+  margin: 40px 0px;
+  margin: 4rem 0;
+}
+/* line 41, ../sass/layout/_layout.scss */
+.post p {
+  margin-bottom: 10px;
+  margin-bottom: 1rem;
+}
+
+/************** Footer *****************/
+/* line 48, ../sass/layout/_layout.scss */
+footer {
+  text-align: center;
+  clear: both;
+}
+/* line 52, ../sass/layout/_layout.scss */
+footer .l-container {
+  display: block;
+  overflow: hidden;
+  font-size: 14px;
+}
+/* line 56, ../sass/layout/_layout.scss */
+footer .l-container p {
+  display: block;
+  text-align: center;
+  margin: 0px 1px 10px 0px;
+  margin: 0 0.1rem 1rem 0;
+}
+/* line 62, ../sass/layout/_layout.scss */
+footer .l-container a {
+  margin: 0px 3px 0px 3px;
+  margin: 0 0.3rem 0 0.3rem;
+}
+/* line 66, ../sass/layout/_layout.scss */
+footer .l-container img {
+  border-radius: 3px;
+  vertical-align: middle;
+}
+
+/* line 74, ../sass/layout/_layout.scss */
+.divider {
+  border-top: 1px solid #d4d4d4;
+}
+
+/* line 2, ../sass/layout/_main-nav.scss */
+.l-main-nav ul, .l-main-nav li {
+  list-style: none;
+}
+/* line 5, ../sass/layout/_main-nav.scss */
+.l-main-nav ul {
+  overflow: hidden;
+  border-radius: 4px 4px 0 0;
+}
+/* line 9, ../sass/layout/_main-nav.scss */
+.l-main-nav li {
+  display: block;
+  float: left;
+}
+/* line 13, ../sass/layout/_main-nav.scss */
+.l-main-nav a {
+  display: block;
+  padding: 0 2rem;
+  color: #fff;
+  font-weight: 700;
+}
+/* line 19, ../sass/layout/_main-nav.scss */
+.l-main-nav a:hover, .l-main-nav a:focus {
+  background: #005580;
+}
+
+/* line 1, ../sass/modules/_reusable.scss */
+.r-hide {
+  display: none;
+}

@@ -1,0 +1,29 @@
+$total-columns: 12;    // a 12-column grid
+$column-width : 4rem;  // each column is 4em wide - 6rem
+$gutter-width : 1rem;  // 1em gutters between columns 2rem
+$grid-padding : 0;     //$gutter-width;  // grid-padding equal to gutters
+
+$row-height: 2.4rem;
+
+$medium-columns: 8;
+$large-columns : 16;
+
+$container-width: container-outer-width($large-columns);
+
+$rem-with-px-fallback: false;
+
+
+.grid-row {
+    @include rem-fallback(margin,24 0);
+    &:after {
+        @include clearfix;
+    }
+}
+
+.grid-button-row {
+  button,.l-button {
+    display: block;
+    float: left;
+    @include rem-fallback(margin,0 10 10 0);
+  }
+}

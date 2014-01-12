@@ -1,0 +1,142 @@
+/*
+   Foundation Visibility Classes
+*/
+
+@if $include-html-visibility-classes != false {
+    .show-for-mobile,
+    .show-for-mobile-only,
+    .show-for-tablet-down,
+    .show-for-desktop-down,
+    .hide-for-tablet,
+    .hide-for-tablet-up,
+    .hide-for-tablet-only,
+    .hide-for-desktop,
+    .hide-for-desktop-up,
+    .hide-for-desktop-only,
+    .hide-for-xdesktop,
+    .hide-for-xdesktop-up,
+    .hide-for-xdesktop-only { display: inherit !important; }
+
+    .hide-for-mobile,
+    .hide-for-mobile-only,
+    .hide-for-tablet-down,
+    .show-for-tablet,
+    .show-for-tablet-up,
+    .show-for-tablet-only,
+    .hide-for-desktop-down,
+    .show-for-desktop,
+    .show-for-desktop-up,
+    .show-for-desktop-only,
+    .show-for-xdesktop,
+    .show-for-xdesktop-up,
+    .show-for-xdesktop-only { display: none !important; }
+
+    /* Tablet Displays: 641px and up */
+    @media #{$tablet-up} {
+        .hide-for-mobile,
+        .hide-for-mobile-only,
+        .show-for-tablet,
+        .show-for-tablet-down,
+        .show-for-tablet-up,
+        .show-for-tablet-only,
+        .hide-for-desktop,
+        .hide-for-desktop-up,
+        .hide-for-desktop-only,
+        .hide-for-xdesktop,
+        .hide-for-xdesktop-up,
+        .hide-for-xdesktop-only { display: inherit !important; }
+
+        .show-for-mobile,
+        .show-for-mobile-only,
+        .hide-for-tablet,
+        .hide-for-tablet-down,
+        .hide-for-tablet-up,
+        .hide-for-tablet-only,
+        .hide-for-desktop-down,
+        .show-for-desktop,
+        .show-for-desktop-up,
+        .show-for-desktop-only,
+        .show-for-xdesktop,
+        .show-for-xdesktop-up,
+        .show-for-xdesktop-only { display: none !important; }
+    }
+
+    /* Desktop Displays: 1024px and up */
+    @media #{$desktop-up} {
+        .hide-for-mobile,
+        .hide-for-mobile-only,
+        .hide-for-tablet,
+        .hide-for-tablet-down,
+        .hide-for-tablet-only,
+        .show-for-tablet-up,
+        .show-for-desktop,
+        .show-for-desktop-up,
+        .show-for-desktop-only,
+        .hide-for-xdesktop,
+        .hide-for-xdesktop-up,
+        .hide-for-xdesktop-only { display: inherit !important; }
+
+        .show-for-mobile-only,
+        .show-for-tablet,
+        .show-for-tablet-down,
+        .show-for-tablet-only,
+        .hide-for-desktop,
+        .hide-for-desktop-up,
+        .hide-for-desktop-only,
+        .show-for-xdesktop,
+        .show-for-xdesktop-up,
+        .show-for-xdesktop-only { display: none !important; }
+    }
+
+    /* X-Desktop Displays: 1441 and up */
+    @media #{$xdesktop-up} {
+        .hide-for-mobile,
+        .hide-for-mobile-only,
+        .hide-for-tablet,
+        .hide-for-tablet-down,
+        .hide-for-tablet-only,
+        .show-for-tablet-up,
+        .show-for-desktop-up,
+        .show-for-xdesktop,
+        .show-for-xdesktop-up,
+        .show-for-xdesktop-only { display: inherit !important; }
+
+        .show-for-mobile-only,
+        .show-for-tablet,
+        .show-for-tablet-down,
+        .show-for-tablet-only,
+        .show-for-desktop,
+        .show-for-desktop-only,
+        .show-for-desktop-down,
+        .hide-for-xdesktop,
+        .hide-for-xdesktop-up,
+        .hide-for-xdesktop-only { display: none !important; }
+    }
+
+    /* Orientation targeting */
+    .show-for-landscape,
+    .hide-for-portrait { display: inherit !important; }
+    .hide-for-landscape,
+    .show-for-portrait { display: none !important; }
+
+
+    @media #{$landscape} {
+        .show-for-landscape,
+        .hide-for-portrait { display: inherit !important; }
+        .hide-for-landscape,
+        .show-for-portrait { display: none !important; }
+    }
+
+    @media #{$portrait} {
+        .show-for-portrait,
+        .hide-for-landscape { display: inherit !important; }
+        .hide-for-portrait,
+        .show-for-landscape { display: none !important; }
+
+        /* Touch-enabled device targeting */
+        .show-for-touch { display: none !important; }
+        .hide-for-touch { display: inherit !important; }
+        .touch .show-for-touch { display: inherit !important; }
+        .touch .hide-for-touch { display: none !important; }
+    }
+}

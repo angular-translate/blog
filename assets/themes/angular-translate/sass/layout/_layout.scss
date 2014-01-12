@@ -1,0 +1,76 @@
+.content-section,
+header,
+footer {
+    @include container;
+    margin-top:2.4rem;
+  &:after{
+    @include clearfix;
+  }
+}
+
+nav li{
+  display:inline;
+}
+
+header{
+    margin:2.4rem auto;
+}
+
+
+/*************** Header ***************/
+.header {
+  .logo{
+    margin-bottom: 1rem;
+  }
+}
+
+/************** Content *****************/
+
+.posts {
+  list-style-type: none;
+  margin-bottom: 2rem;
+}
+
+.posts li {
+  line-height: 1.75rem;
+}
+
+
+.post{
+    @include rem-fallback(margin, 40 0);
+    p{
+        @include rem-fallback(margin-bottom, 10);
+    }
+}
+
+/************** Footer *****************/
+
+footer{
+    text-align: center;
+    clear:both;
+
+    .l-container{
+        display: block;
+        overflow: hidden;
+        font-size:$footer-font-size;
+        p {
+            display: block;
+            text-align:center;
+            @include rem-fallback(margin,0 1 10 0);
+        }
+
+        a{
+             @include rem-fallback(margin,0 3 0 3);
+        }
+
+        img {
+            border-radius: $border-radius - 1;
+            vertical-align: middle;
+        }
+
+    }
+}
+
+.divider{
+    border-top: 1px solid $divider-color;
+}
