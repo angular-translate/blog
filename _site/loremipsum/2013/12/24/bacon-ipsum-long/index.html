@@ -122,6 +122,38 @@
           <p>Logo designed by <a href="http://stefankroeckel.tumblr.com/">Stefan Kröckel</a></p>
         </div>
           </footer>
+
+      <script>
+        var el = document.querySelectorAll('.archive .year');
+        var className = 'show';
+        var forEach = Array.prototype.forEach;
+
+        forEach.call(el, function ( item ){
+        item.addEventListener('click', function (event) {
+
+        var year = ".y"+event.target.textContent;
+
+        var yearSelector = event.target.parentNode.querySelectorAll(year);
+        console.log(event.target.parentNode.querySelector(year));
+        forEach.call(yearSelector, function ( elem ){
+
+        if (elem.classList) {
+        elem.classList.toggle(className);
+        } else {
+        var classes = elem.className.split(' ');
+        var existingIndex = classes.indexOf(className);
+
+        if (existingIndex >= 0)
+        classes.splice(existingIndex, 1);
+        else
+        classes.push(className);
+        elem.className = classes.join(' ');
+        }
+        });
+        });
+        });
+      </script>
+
     </body>
 </html>
 

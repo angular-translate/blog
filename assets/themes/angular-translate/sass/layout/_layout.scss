@@ -30,7 +30,7 @@ footer{
     border-bottom: 1px solid;
     // min-height: 63px;
     max-width:100%;
-    @incliude transform: translateZ(0);
+    @incliude transform(translate3d(0,0,0));
 
     .logo{
         display:block;
@@ -80,36 +80,50 @@ footer{
 
 
 aside{
-    margin-bottom: 1.5em;
     position: relative;
     @include span-columns(3,12);
+    clear:both;
+    article{
+        @include transform(translateZ(0));
+        margin-bottom: 6rem;
 
-  /*  background: $code-background-color;
-    border: 1px solid $content-border;
-    border-radius: $border-radius;
-*/
+        h1{
+            font-size:18px;
+            text-indent:1rem;
+        }
 
-    h1{
-        font-size:18px;
-        text-indent:1rem;
-    }
+        ul{
+            border-top:1px solid;
+            .item{
+                line-height: 3em;
+                border-bottom: 1px solid;
+                position: relative;
+                margin-top: -1px;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                font-size:$font-size - 2;
+                @include rem-fallback(text-indent, 15);
+            }
+        }
 
-    ul{
-        border-top:1px solid;
-      //  margin-top:1rem;
-        li{
-            line-height: 3em;
-            border-bottom: 1px solid;
-            position: relative;
-            margin-top: -1px;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            @include rem-fallback(text-indent, 15);
-
-            /*&:last-child{
-                padding-bottom:1rem;
-            }*/
+        &.archive{
+            h4 {
+                padding:1rem 0;
+                border-bottom: 1px solid;
+                cursor:pointer;
+            }
+            .item {     line-height:2em; }
+            .titles{
+                opacity:0;
+                height:0;
+                @include transition(all 0.5s ease);
+                &.show{
+                    @include transition(all 0.5s ease);
+                    opacity:1;
+                    height:auto;
+                }
+            }
         }
     }
 }

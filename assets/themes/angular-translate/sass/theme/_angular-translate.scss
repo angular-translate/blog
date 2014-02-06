@@ -21,25 +21,33 @@
 
 
 aside{
-    h1{
-        color:$gray;
-    }
-    ul{
-        border-top-color:$content-divider;
-        li{
-            border-bottom-color:$content-divider;
-
-            &:hover{
-                background-color: $sidebar-hover;//$navbar-active-color;
-                > a{
-                   color: $sidebar-hover-font;//$black;
-                    text-decoration:none;
-                }
+    article{
+        &.archive{
+            h4{
+                border-bottom-color:$content-divider;
             }
-            a{
-                text-shadow:0 1px 0 rgba(255, 255, 255, 0.5);
-                font-size:$font-size - 2;
-                font-weight:500;
+        }
+
+        h1{
+            color:$gray;
+        }
+        ul{
+            border-top-color:$content-divider;
+            .item{
+                border-bottom-color:$content-divider;
+
+                &:hover{
+                    background-color: $sidebar-hover;//$navbar-active-color;
+                    > a{
+                        color: $sidebar-hover-font;//$black;
+                        text-decoration:none;
+                    }
+                }
+                a{
+                    text-shadow:0 1px 0 rgba(255, 255, 255, 0.5);
+                    font-size:$font-size - 2;
+                    font-weight:500;
+                }
             }
         }
     }
