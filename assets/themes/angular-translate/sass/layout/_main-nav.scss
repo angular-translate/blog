@@ -1,23 +1,70 @@
-.l-main-nav {
-  ul, li {
-    list-style: none;
-  }
-  ul {
-    overflow: hidden;
-    border-radius: $border-radius $border-radius 0 0;
-  }
-  li {
-    display: block;
-    float: left;
-  }
-  a {
-    display: block;
-    padding: 0 2rem;
-    color: #fff;
-    font-weight: 700;
-
-    &:hover,&:focus {
-      background: $darker-blue;
+.navbar-fixed-top {
+    margin:{
+        right: auto;
+        left: auto;
     }
-  }
+    @include container;
+    &:before, &:after{
+        display: table;
+        line-height: 0;
+        content: "";
+    }
+    &:after{
+        @include clearfix;
+    }
+}
+
+.nav-item{
+    @include rem-fallback(margin-right, 20);
+}
+.nav-item.nav {
+    display: inline-flex;
+    float: left;
+
+    &.right {
+        float: right;
+        margin-right: 0;
+    }
+
+
+    li{
+        padding: 0;
+        @include rem-fallback(line-height, 61);
+
+        &.active a{
+            color:$navbar-active-font-color;
+            background-color: $navbar-active-color;
+        }
+
+        a{
+            font-size:$font-size - 2;
+            @include rem-fallback(padding, 23 12);
+            color: $gray;
+            text-decoration: none;
+            font-weight:500;
+            text-shadow: 0 1px 0 #fff;
+
+            &:hover{
+              color:$black;
+            }
+            &:before{
+                @include font-awesome;
+                text-decoration: inherit;
+            }
+
+            &.book:before{
+                content:$fa-var-book;
+                font-style: italic;
+            }
+            &.signal:before{
+                content:$fa-var-signal;
+            }
+            &.github-sign:before{
+                content:$fa-var-github-square;
+            }
+            &.pencil-square:before{
+                content:$fa-var-pencil-square;
+            }
+        }
+    }
 }

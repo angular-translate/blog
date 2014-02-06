@@ -2,46 +2,177 @@
 header,
 footer {
     @include container;
-    margin-top:2.4rem;
-  &:after{
-    @include clearfix;
-  }
+    &:after{
+        @include clearfix;
+    }
 }
 
 nav li{
-  display:inline;
+    display:inline;
 }
 
-header{
-    margin:2.4rem auto;
+.content-section{
+    margin-top:8.5rem;
 }
 
+footer{
+    margin-top:2.4rem;
+}
 
 /*************** Header ***************/
 .header {
-  .logo{
-    margin-bottom: 1rem;
-  }
+    margin:0rem auto 3rem;
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+    z-index: 1030;
+    border-bottom: 1px solid;
+    // min-height: 63px;
+    max-width:100%;
+    @incliude transform: translateZ(0);
+
+    .logo{
+        display:block;
+        float:left;
+        padding: 1.5rem 0;
+        img{
+            @include rem-fallback(width, 215);
+            @include rem-fallback(max-height, 40);
+        }
+    }
 }
 
 /************** Content *****************/
 
 .posts {
-  list-style-type: none;
-  margin-bottom: 2rem;
-}
+    list-style-type: none;
+    margin-bottom: 2rem;
+    @include span-columns(8.5 omega, 12);
+    article {
+        margin-bottom: 0;
+        border-bottom: 1px solid;
+        margin-top: -1px;
+        padding: 1.4em 0 1rem;
+        min-height:12rem;
 
-.posts li {
-  line-height: 1.75rem;
-}
+        &:first-child{
+            padding-top:1rem;
+            padding-bottom:6rem;
+        }
 
+        .left-side{
+            font-weight:bold;
+            @include span-columns(1.3,9);
+            margin-right:0;
+        }
 
-.post{
-    @include rem-fallback(margin, 40 0);
-    p{
-        @include rem-fallback(margin-bottom, 10);
+        .right-side{
+            @include span-columns(7.7 omega, 9);
+
+            a:hover{
+                text-decoration:none;
+            }
+        }
     }
 }
+
+
+
+aside{
+    margin-bottom: 1.5em;
+    position: relative;
+    @include span-columns(3,12);
+
+  /*  background: $code-background-color;
+    border: 1px solid $content-border;
+    border-radius: $border-radius;
+*/
+
+    h1{
+        font-size:18px;
+        text-indent:1rem;
+    }
+
+    ul{
+        border-top:1px solid;
+      //  margin-top:1rem;
+        li{
+            line-height: 3em;
+            border-bottom: 1px solid;
+            position: relative;
+            margin-top: -1px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            @include rem-fallback(text-indent, 15);
+
+            /*&:last-child{
+                padding-bottom:1rem;
+            }*/
+        }
+    }
+}
+
+.pagination {
+    clear:both;
+    margin-top: 2rem;
+    text-align: center;
+    @include container;
+
+    .prev:before{
+         content:" "+$fa-var-angle-double-left;
+         padding-right:2px;
+    }
+
+    .next:after{
+         content:" " + $fa-var-angle-double-right;
+    }
+
+    .next:after,
+    .prev:before{
+        @include font-awesome;
+        text-decoration: inherit;
+
+    }
+}
+
+
+
+.post-content{
+    @include rem-fallback(margin, 40 0);
+
+    .meta{
+        font-size:$font-size - 2;
+        line-height: 1.3;
+        font-weight: 400;
+    }
+
+    h2 { @include rem-fallback(margin-bottom, 10);}
+
+
+    .back-button{
+        font-weight:400;
+        color:$gray;
+        &:before{
+            @include font-awesome;
+            font-weight:400;
+            content: $fa-var-long-arrow-left + " ";
+            text-decoration: inherit;
+        }
+
+    }
+
+    p{
+        @include rem-fallback(padding, 13 0 13);
+
+        > h1{
+            font-size:$font-size + 3;
+        }
+    }
+}
+
+
 
 /************** Footer *****************/
 
@@ -60,7 +191,7 @@ footer{
         }
 
         a{
-             @include rem-fallback(margin,0 3 0 3);
+            @include rem-fallback(margin,0 3 0 3);
         }
 
         img {
@@ -72,5 +203,5 @@ footer{
 }
 
 .divider{
-    border-top: 1px solid $divider-color;
+    border-top: 1px solid;
 }

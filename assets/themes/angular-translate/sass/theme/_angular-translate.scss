@@ -1,0 +1,51 @@
+
+/*************** Header ***************/
+.header {
+    background:#fff;
+    border-bottom-color: $divider-color;
+}
+
+/************** Content *****************/
+
+.posts {
+    article {
+        border-bottom-color: $content-divider;
+        .left-side{
+            span{
+                color:$gray;
+            }
+        }
+    }
+}
+
+
+
+aside{
+    h1{
+        color:$gray;
+    }
+    ul{
+        border-top-color:$content-divider;
+        li{
+            border-bottom-color:$content-divider;
+
+            &:hover{
+                background-color: $sidebar-hover;//$navbar-active-color;
+                > a{
+                   color: $sidebar-hover-font;//$black;
+                    text-decoration:none;
+                }
+            }
+            a{
+                text-shadow:0 1px 0 rgba(255, 255, 255, 0.5);
+                font-size:$font-size - 2;
+                font-weight:500;
+            }
+        }
+    }
+}
+
+
+.divider{
+    border-top-color:  $divider-color;
+}

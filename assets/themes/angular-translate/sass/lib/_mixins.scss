@@ -57,3 +57,14 @@
   @include set-container-width($columns);
   margin: { left: auto; right: auto; }
 }
+
+
+
+@mixin font-awesome{
+    font:{
+        family: FontAwesome;
+        weight: normal;
+        style: normal;
+        size: $font-size - 2;
+    }
+}
