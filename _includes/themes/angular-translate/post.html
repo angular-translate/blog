@@ -5,12 +5,13 @@
      <a  class="back-button long-left" href="javascript:history.back()"></a>
     {{ page.date | date_to_string }},
     <span>{{ page.categories }}</span>
-
   </div>
 
+
+  {{ page.url | share_buttons }}
+
+
   <h2>{{ page.title }}</h2>
-
-
 
   {{ content }}
 </article>

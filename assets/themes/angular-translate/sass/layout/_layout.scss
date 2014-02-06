@@ -155,7 +155,10 @@ aside{
 
 .post-content{
     @include rem-fallback(margin, 40 0);
-
+    .buttons{
+        padding:1rem 0;
+        display:inline-flex;
+    }
     .meta{
         font-size:$font-size - 2;
         line-height: 1.3;
