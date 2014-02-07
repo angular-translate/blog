@@ -9,10 +9,9 @@
 @import "lib/media-queries";
 @import "lib/visibility";
 @import "lib/mixins";
-
+@import "modules/reusable";
 @import "base/base";
 @import "images/images_sources";
 @import "layout/layout";
 @import "layout/main-nav";
 @import "theme/angular-translate";
-@import "modules/reusable";

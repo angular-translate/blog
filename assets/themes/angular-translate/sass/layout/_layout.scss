@@ -35,7 +35,11 @@ footer{
     .logo{
         display:block;
         float:left;
-        padding: 1.5rem 0;
+        padding: 1.5rem 1rem;
+        @include at-breakpoint($xdesktop-up) {
+            padding: 1.5rem 0;
+        }
+
         img{
             @include rem-fallback(width, 215);
             @include rem-fallback(max-height, 40);
@@ -48,7 +52,14 @@ footer{
 .posts {
     list-style-type: none;
     margin-bottom: 2rem;
-    @include span-columns(8.5 omega, 12);
+
+    @include span-columns(12, 12);
+    @include pad(0.5,0.5);
+
+  @include at-breakpoint($tablet-bp-up) {
+        @include span-columns(8.5 omega, 12);
+  }
+
     article {
         margin-bottom: 0;
         border-bottom: 1px solid;
@@ -56,20 +67,27 @@ footer{
         padding: 1.4em 0 1rem;
         min-height:12rem;
 
+        @include at-breakpoint($tablet-bp-up) {
+            display:inline-flex;
+        }
+
         &:first-child{
-            padding-top:1rem;
-            padding-bottom:6rem;
+            padding: 1rem 0;
+            @include at-breakpoint($tablet-bp-up) {
+                Padding-top:1rem;
+                padding-bottom:2rem;
+              }
         }
 
-        .left-side{
+        .meta-container{
             font-weight:bold;
-            @include span-columns(1.3,9);
-            margin-right:0;
+            .meta{ clear: both; display:block;}
         }
-
-        .right-side{
-            @include span-columns(7.7 omega, 9);
-
+        .post-data-container{
+            width:100%;
+            margin-botton:1rem;
+            clear:both;
+            a{ font-size:1.6rem; line-height:1;}
             a:hover{
                 text-decoration:none;
             }
@@ -80,9 +98,19 @@ footer{
 
 
 aside{
-    position: relative;
-    @include span-columns(3,12);
-    clear:both;
+    display:none;
+
+    @include at-breakpoint($tablet-bp-up) {
+        Position: relative;
+        display:block;
+        clear:both;
+        @include span-columns(3,12);
+        @include pad(0.5,0.5);
+    }
+    @include at-breakpoint($xdesktop-bp) {
+        @include pad(0,0);
+    }
+
     article{
         @include transform(translateZ(0));
         margin-bottom: 6rem;
@@ -113,16 +141,11 @@ aside{
                 border-bottom: 1px solid;
                 cursor:pointer;
             }
-            .item {     line-height:2em; }
+            .item {  line-height:2em; }
             .titles{
                 opacity:0;
                 height:0;
                 @include transition(all 0.5s ease);
-                &.show{
-                    @include transition(all 0.5s ease);
-                    opacity:1;
-                    height:auto;
-                }
             }
         }
     }
@@ -155,6 +178,13 @@ aside{
 
 .post-content{
     @include rem-fallback(margin, 40 0);
+
+    @include pad(0.5,0.5);
+
+    @include at-breakpoint($xdesktop-bp) {
+        @include pad(0,0);
+    }
+
     .buttons{
         padding:1rem 0;
         display:inline-flex;
@@ -204,7 +234,14 @@ footer{
         p {
             display: block;
             text-align:center;
-            @include rem-fallback(margin,0 1 10 0);
+
+            @include rem-fallback(margin,0 1 5 0);
+
+
+            @include at-breakpoint($tablet-bp-up) {
+                @include rem-fallback(margin,0 1 10 0);
+            }
+
         }
 
         a{
@@ -214,11 +251,12 @@ footer{
         img {
             border-radius: $border-radius - 1;
             vertical-align: middle;
+            display:none;
+            @include at-breakpoint($tablet-bp-up) {
+                display:inline;
+            }
+
         }
 
     }
-}
-
-.divider{
-    border-top: 1px solid;
 }

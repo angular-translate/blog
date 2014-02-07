@@ -17,11 +17,11 @@
 
 
       <header class="header">
-        <div class="navbar navbar-fixed-top">
-              <a class="logo nav-item" href="http://pascalprecht.github.io/angular-translate">
+        <div class="navbar">
+              <a class="logo header-item" href="http://pascalprecht.github.io/angular-translate">
                 <img class="pull-left" src="http://pascalprecht.github.io/angular-translate/docs/en/img/identity/logo/angular-translate-alternative/angular-translate_alternative_small2.png">
               </a>
-              <ul class="nav nav-item">
+              <ul class="nav header-item desktop">
                 <li>
                   <a class="book" href="http://pascalprecht.github.io/angular-translate/docs/en/#/api">
                     API Reference
@@ -38,7 +38,7 @@
                   </a>
                 </li>
               </ul>
-              <ul class="nav right nav-item">
+              <ul class="nav right header-item desktop">
                 <li>
                   <a href="http://pascalprecht.github.io/angular-translate/plato" class="signal">
                    Plato Report
@@ -50,6 +50,37 @@
                   </a>
                 </li>
              </ul>
+
+
+               <ul class="nav right mobile">
+                 <div class="bars"></div>
+                <li>
+                  <a class="book" href="http://pascalprecht.github.io/angular-translate/docs/en/#/api">
+                    API Reference
+                  </a>
+                </li>
+                <li>
+                  <a class="book" href="http://pascalprecht.github.io/angular-translate/docs/en/#/guide">
+                    Guide
+                  </a>
+                </li>
+                <li class="active">
+                  <a class="pencil-square" href="#/guide">
+                    Blog
+                  </a>
+                </li>
+                <li>
+                  <a href="http://pascalprecht.github.io/angular-translate/plato" class="signal">
+                   Plato Report
+                  </a>
+                </li>
+                <li>
+                  <a href="http://github.com/PascalPrecht/angular-translate" class="github-sign">
+                   View on GitHub
+                  </a>
+                </li>
+             </ul>
+
         </div>
       </header>
 
@@ -71,7 +102,6 @@
             <a href="https://twitter.com/share"
               class="twitter-share-button"
               data-url=""
-              data-via="twitterapi"
               data-lang="en">
             </a>
 
@@ -297,33 +327,44 @@
 
       <script>
         var el = document.querySelectorAll('.archive .year');
-        var className = 'show';
-        var forEach = Array.prototype.forEach;
+var forEach = Array.prototype.forEach;
 
-        forEach.call(el, function ( item ){
-        item.addEventListener('click', function (event) {
-
-        var year = ".y"+event.target.textContent;
-
-        var yearSelector = event.target.parentNode.querySelectorAll(year);
-        console.log(event.target.parentNode.querySelector(year));
-        forEach.call(yearSelector, function ( elem ){
-
-        if (elem.classList) {
+var toggleClass = function(elem){
+    var className = 'show';
+    if (elem.classList) {
         elem.classList.toggle(className);
-        } else {
+    } else {
         var classes = elem.className.split(' ');
         var existingIndex = classes.indexOf(className);
 
         if (existingIndex >= 0)
-        classes.splice(existingIndex, 1);
+            classes.splice(existingIndex, 1);
         else
-        classes.push(className);
+            classes.push(className);
         elem.className = classes.join(' ');
-        }
+    }
+}
+forEach.call(el, function ( item ){
+    item.addEventListener('click', function (event) {
+
+        var year = ".y"+event.target.textContent;
+        var yearSelector = event.target.parentNode.querySelectorAll(year);
+        forEach.call(yearSelector, function ( elem ){
+            toggleClass(elem);
         });
+    });
+});
+var bars = document.querySelector('.bars');
+
+if (bars.offsetWidth !== 0 && bars.offsetHeight !==0 ){}
+
+ bars.addEventListener('click', function (event) {
+        var menuItems = event.target.parentNode.querySelectorAll('li');
+        forEach.call(menuItems, function ( elem ){
+            toggleClass(elem);
         });
-        });
+    });
+
       </script>
         <div id="fb-root"></div>
   <script>(function(d, s, id) {
