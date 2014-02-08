@@ -1,4 +1,5 @@
 name: angular-translate Blog
+description: all the news about the angular-translate plugin
 markdown: redcarpet
 pygments: true
 

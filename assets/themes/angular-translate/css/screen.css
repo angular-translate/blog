@@ -2216,200 +2216,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 */
 /* The breakpoints */
 /* The breakpoints */
-/*
-   Foundation Visibility Classes
-*/
-/* line 6, ../sass/lib/_visibility.scss */
-.show-for-mobile,
-.show-for-mobile-only,
-.show-for-tablet-down,
-.show-for-desktop-down,
-.hide-for-tablet,
-.hide-for-tablet-up,
-.hide-for-tablet-only,
-.hide-for-desktop,
-.hide-for-desktop-up,
-.hide-for-desktop-only,
-.hide-for-xdesktop,
-.hide-for-xdesktop-up,
-.hide-for-xdesktop-only {
-  display: inherit !important;
-}
-
-/* line 20, ../sass/lib/_visibility.scss */
-.hide-for-mobile,
-.hide-for-mobile-only,
-.hide-for-tablet-down,
-.show-for-tablet,
-.show-for-tablet-up,
-.show-for-tablet-only,
-.hide-for-desktop-down,
-.show-for-desktop,
-.show-for-desktop-up,
-.show-for-desktop-only,
-.show-for-xdesktop,
-.show-for-xdesktop-up,
-.show-for-xdesktop-only {
-  display: none !important;
-}
-
-/* Tablet Displays: 641px and up */
-@media only screen and (min-width: 40.063em) {
-  /* line 36, ../sass/lib/_visibility.scss */
-  .hide-for-mobile,
-  .hide-for-mobile-only,
-  .show-for-tablet,
-  .show-for-tablet-down,
-  .show-for-tablet-up,
-  .show-for-tablet-only,
-  .hide-for-desktop,
-  .hide-for-desktop-up,
-  .hide-for-desktop-only,
-  .hide-for-xdesktop,
-  .hide-for-xdesktop-up,
-  .hide-for-xdesktop-only {
-    display: inherit !important;
-  }
-
-  /* line 49, ../sass/lib/_visibility.scss */
-  .show-for-mobile,
-  .show-for-mobile-only,
-  .hide-for-tablet,
-  .hide-for-tablet-down,
-  .hide-for-tablet-up,
-  .hide-for-tablet-only,
-  .hide-for-desktop-down,
-  .show-for-desktop,
-  .show-for-desktop-up,
-  .show-for-desktop-only,
-  .show-for-xdesktop,
-  .show-for-xdesktop-up,
-  .show-for-xdesktop-only {
-    display: none !important;
-  }
-}
-/* Desktop Displays: 1024px and up */
-@media only screen and (min-width: 64.063em) {
-  /* line 66, ../sass/lib/_visibility.scss */
-  .hide-for-mobile,
-  .hide-for-mobile-only,
-  .hide-for-tablet,
-  .hide-for-tablet-down,
-  .hide-for-tablet-only,
-  .show-for-tablet-up,
-  .show-for-desktop,
-  .show-for-desktop-up,
-  .show-for-desktop-only,
-  .hide-for-xdesktop,
-  .hide-for-xdesktop-up,
-  .hide-for-xdesktop-only {
-    display: inherit !important;
-  }
-
-  /* line 79, ../sass/lib/_visibility.scss */
-  .show-for-mobile-only,
-  .show-for-tablet,
-  .show-for-tablet-down,
-  .show-for-tablet-only,
-  .hide-for-desktop,
-  .hide-for-desktop-up,
-  .hide-for-desktop-only,
-  .show-for-xdesktop,
-  .show-for-xdesktop-up,
-  .show-for-xdesktop-only {
-    display: none !important;
-  }
-}
-/* X-Desktop Displays: 1441 and up */
-@media only screen and (min-width: 90.063em) {
-  /* line 93, ../sass/lib/_visibility.scss */
-  .hide-for-mobile,
-  .hide-for-mobile-only,
-  .hide-for-tablet,
-  .hide-for-tablet-down,
-  .hide-for-tablet-only,
-  .show-for-tablet-up,
-  .show-for-desktop-up,
-  .show-for-xdesktop,
-  .show-for-xdesktop-up,
-  .show-for-xdesktop-only {
-    display: inherit !important;
-  }
-
-  /* line 104, ../sass/lib/_visibility.scss */
-  .show-for-mobile-only,
-  .show-for-tablet,
-  .show-for-tablet-down,
-  .show-for-tablet-only,
-  .show-for-desktop,
-  .show-for-desktop-only,
-  .show-for-desktop-down,
-  .hide-for-xdesktop,
-  .hide-for-xdesktop-up,
-  .hide-for-xdesktop-only {
-    display: none !important;
-  }
-}
-/* Orientation targeting */
-/* line 117, ../sass/lib/_visibility.scss */
-.show-for-landscape,
-.hide-for-portrait {
-  display: inherit !important;
-}
-
-/* line 119, ../sass/lib/_visibility.scss */
-.hide-for-landscape,
-.show-for-portrait {
-  display: none !important;
-}
-
-@media only screen and (orientation: landscape) {
-  /* line 124, ../sass/lib/_visibility.scss */
-  .show-for-landscape,
-  .hide-for-portrait {
-    display: inherit !important;
-  }
-
-  /* line 126, ../sass/lib/_visibility.scss */
-  .hide-for-landscape,
-  .show-for-portrait {
-    display: none !important;
-  }
-}
-@media only screen and (orientation: portrait) {
-  /* line 131, ../sass/lib/_visibility.scss */
-  .show-for-portrait,
-  .hide-for-landscape {
-    display: inherit !important;
-  }
-
-  /* line 133, ../sass/lib/_visibility.scss */
-  .hide-for-portrait,
-  .show-for-landscape {
-    display: none !important;
-  }
-
-  /* Touch-enabled device targeting */
-  /* line 137, ../sass/lib/_visibility.scss */
-  .show-for-touch {
-    display: none !important;
-  }
-
-  /* line 138, ../sass/lib/_visibility.scss */
-  .hide-for-touch {
-    display: inherit !important;
-  }
-
-  /* line 139, ../sass/lib/_visibility.scss */
-  .touch .show-for-touch {
-    display: inherit !important;
-  }
-
-  /* line 140, ../sass/lib/_visibility.scss */
-  .touch .hide-for-touch {
-    display: none !important;
-  }
-}
 /** Organisation of this file
 
 1) Base rules
@@ -2811,8 +2617,50 @@ aside article.archive .titles {
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
+/* line 152, ../sass/layout/_layout.scss */
+aside article.constributors {
+  display: none;
+  overflow: hidden;
+  font-size: 14px;
+}
+@media (min-width: 40.03938em) {
+  /* line 152, ../sass/layout/_layout.scss */
+  aside article.constributors {
+    display: block;
+  }
+}
+/* line 159, ../sass/layout/_layout.scss */
+aside article.constributors li {
+  display: block;
+  padding: 10px 0px;
+  padding: 1rem 0;
+}
+@media (min-width: 25.03938em) {
+  /* line 159, ../sass/layout/_layout.scss */
+  aside article.constributors li {
+    padding: 10px 0px;
+    padding: 1rem 0;
+  }
+}
+/* line 167, ../sass/layout/_layout.scss */
+aside article.constributors a {
+  margin: 0px 3px 0px 3px;
+  margin: 0 0.3rem 0 0.3rem;
+}
+/* line 171, ../sass/layout/_layout.scss */
+aside article.constributors img {
+  border-radius: 3px;
+  vertical-align: middle;
+  display: none;
+}
+@media (min-width: 56.28938em) {
+  /* line 171, ../sass/layout/_layout.scss */
+  aside article.constributors img {
+    display: inline;
+  }
+}
 
-/* line 154, ../sass/layout/_layout.scss */
+/* line 184, ../sass/layout/_layout.scss */
 .pagination {
   clear: both;
   margin-top: 2rem;
@@ -2829,16 +2677,16 @@ aside article.archive .titles {
   display: table;
   clear: both;
 }
-/* line 160, ../sass/layout/_layout.scss */
+/* line 190, ../sass/layout/_layout.scss */
 .pagination .prev:before {
   content: " \f100";
   padding-right: 2px;
 }
-/* line 165, ../sass/layout/_layout.scss */
+/* line 195, ../sass/layout/_layout.scss */
 .pagination .next:after {
   content: " \f101";
 }
-/* line 169, ../sass/layout/_layout.scss */
+/* line 199, ../sass/layout/_layout.scss */
 .pagination .next:after,
 .pagination .prev:before {
   font-family: FontAwesome;
@@ -2848,7 +2696,7 @@ aside article.archive .titles {
   text-decoration: inherit;
 }
 
-/* line 179, ../sass/layout/_layout.scss */
+/* line 209, ../sass/layout/_layout.scss */
 .post-content {
   margin: 40px 0px;
   margin: 4rem 0;
@@ -2856,34 +2704,34 @@ aside article.archive .titles {
   padding-right: 3.38983%;
 }
 @media (min-width: 56.28938em) {
-  /* line 179, ../sass/layout/_layout.scss */
+  /* line 209, ../sass/layout/_layout.scss */
   .post-content {
     padding-left: 0%;
     padding-right: 0%;
   }
 }
-/* line 188, ../sass/layout/_layout.scss */
+/* line 218, ../sass/layout/_layout.scss */
 .post-content .buttons {
   padding: 1rem 0;
   display: inline-flex;
 }
-/* line 192, ../sass/layout/_layout.scss */
+/* line 222, ../sass/layout/_layout.scss */
 .post-content .meta {
   font-size: 14px;
   line-height: 1.3;
   font-weight: 400;
 }
-/* line 198, ../sass/layout/_layout.scss */
+/* line 228, ../sass/layout/_layout.scss */
 .post-content h2 {
   margin-bottom: 10px;
   margin-bottom: 1rem;
 }
-/* line 201, ../sass/layout/_layout.scss */
+/* line 231, ../sass/layout/_layout.scss */
 .post-content .back-button {
   font-weight: 400;
   color: #777777;
 }
-/* line 204, ../sass/layout/_layout.scss */
+/* line 234, ../sass/layout/_layout.scss */
 .post-content .back-button:before {
   font-family: FontAwesome;
   font-weight: normal;
@@ -2893,29 +2741,29 @@ aside article.archive .titles {
   content: "\f177 ";
   text-decoration: inherit;
 }
-/* line 213, ../sass/layout/_layout.scss */
+/* line 243, ../sass/layout/_layout.scss */
 .post-content p {
   padding: 13px 0px 13px;
   padding: 1.3rem 0 1.3rem;
 }
-/* line 216, ../sass/layout/_layout.scss */
+/* line 246, ../sass/layout/_layout.scss */
 .post-content p > h1 {
   font-size: 19px;
 }
 
 /************** Footer *****************/
-/* line 226, ../sass/layout/_layout.scss */
+/* line 256, ../sass/layout/_layout.scss */
 footer {
   text-align: center;
   clear: both;
 }
-/* line 230, ../sass/layout/_layout.scss */
+/* line 260, ../sass/layout/_layout.scss */
 footer .l-container {
   display: block;
   overflow: hidden;
   font-size: 14px;
 }
-/* line 234, ../sass/layout/_layout.scss */
+/* line 264, ../sass/layout/_layout.scss */
 footer .l-container p {
   display: block;
   text-align: center;
@@ -2923,28 +2771,16 @@ footer .l-container p {
   margin: 0 0.1rem 0.5rem 0;
 }
 @media (min-width: 25.03938em) {
-  /* line 234, ../sass/layout/_layout.scss */
+  /* line 264, ../sass/layout/_layout.scss */
   footer .l-container p {
     margin: 0px 1px 10px 0px;
     margin: 0 0.1rem 1rem 0;
   }
 }
-/* line 247, ../sass/layout/_layout.scss */
+/* line 273, ../sass/layout/_layout.scss */
 footer .l-container a {
   margin: 0px 3px 0px 3px;
   margin: 0 0.3rem 0 0.3rem;
-}
-/* line 251, ../sass/layout/_layout.scss */
-footer .l-container img {
-  border-radius: 3px;
-  vertical-align: middle;
-  display: none;
-}
-@media (min-width: 25.03938em) {
-  /* line 251, ../sass/layout/_layout.scss */
-  footer .l-container img {
-    display: inline;
-  }
 }
 
 /* line 1, ../sass/layout/_main-nav.scss */
