@@ -49,10 +49,8 @@
 
 
 /* Rewrite apply-container from sussy/grid line 50
- to not add unnecessary padding */
-@mixin apply-container(
-  $columns  : $total-columns
-){
+ to not add unnecessary padding*/
+@mixin apply-container( $columns  : $total-columns){
   @include pie-clearfix;
   @include set-container-width($columns);
   margin: { left: auto; right: auto; }

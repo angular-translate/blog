@@ -12,15 +12,15 @@ $tablet-bp-only: 40.063em 12 64em;
 // Desktop Displays: 1024px
 $desktop-bp-only: 64.063em 12 90em;
 // X-Desktop Displays: 1441 and up
-$xdesktop-bp: 90.063em 12;
+$xdesktop-bp: 90.063rem 12;
 
 
 /* The breakpoints */
 $mobile-bp-up: 0em 12;
 // Tablet Displays: 641px and up
-$tablet-bp-up: 40.063em 12;
+$tablet-bp-up: 40.063rem 12;
 // Desktop Displays: 1024px and up
-$desktop-bp-up: 64.063em 12;
+$desktop-bp-up: 64.063rem 12;
 
 
 $mobile-range: (0em, 40em);
