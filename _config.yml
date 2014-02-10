@@ -1,12 +1,9 @@
 name: angular-translate Blog
 description: all the news about the angular-translate plugin
+keywords: angularjs, angular-translate, translations
 markdown: redcarpet
 pygments: true
-
 permalink: /:categories/:year/:month/:day/:title
-
 exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
-
 paginate: 6
-
 paginate_path: "/page:num"
