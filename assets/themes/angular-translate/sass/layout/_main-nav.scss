@@ -1,0 +1,98 @@
+.navbar{
+    margin:{
+        right: auto;
+        left: auto;
+    }
+    @include container;
+    &:before, &:after{
+        display: table;
+        line-height: 0;
+        content: "";
+    }
+    &:after{
+        @include clearfix;
+    }
+}
+
+.header-item{
+    @include rem-fallback(margin-right, 20);
+}
+
+
+.nav {
+    li a{
+        &:before{
+            @include font-awesome;
+            text-decoration: inherit;
+        }
+
+        &.book:before{
+            content:$fa-var-book;
+            font-style: italic;
+        }
+        &.signal:before{
+            content:$fa-var-signal;
+        }
+        &.github-sign:before{
+            content:$fa-var-github-square;
+        }
+        &.pencil-square:before{
+            content:$fa-var-pencil-square;
+        }
+    }
+
+    &.mobile{
+        display:block;
+        width:100%;
+          @include at-breakpoint($xdesktop-bp) {
+              display:none;
+          }
+
+          .bars{
+              width:1rem; height:3rem;
+              cursor:pointer;
+              float: right;
+              margin-top: -4rem;
+              margin-right: 3rem;
+              &:before{
+                  @include font-awesome;
+                  text-decoration: inherit;
+                  content:$fa-var-bars;
+
+              }
+          }
+
+          li {
+              text-align:center;
+              height:0;
+              opacity:0;
+              @include transition(all 0.5s ease);
+              a{
+                  display:block;
+                  @include rem-fallback(padding, 10 12);
+              }
+          }
+    }
+
+    &.desktop{
+        display:none;
+        @include at-breakpoint($xdesktop-bp) {
+            display: inline-flex;
+            float: left;
+            float:left;
+        }
+
+        li{
+            @include rem-fallback(line-height, 61);
+             padding: 0;
+            a{
+                @include rem-fallback(padding, 23 12);
+            }
+        }
+    }
+
+    &.right {
+        float: right;
+    }
+
+}

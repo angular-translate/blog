@@ -1,0 +1,133 @@
+* {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+*,
+*:before,
+*:after {
+  @include box-sizing(border-box);
+}
+
+html, body {
+  min-height: 100%;
+  font-size: $base-font-size;
+}
+
+body {
+  font-family: $helvetica;
+  font-size: 100%;//1.6rem;
+  line-height: 1.5;
+  color: $text-default;
+  padding-bottom: 24px;
+}
+
+p{
+    font-size: $font-size;
+    line-height: $line-height;
+}
+
+a {
+  color: $link-default;
+  text-decoration: none;
+  cursor:pointer;
+  font-weight: 600;
+
+  &:focus, &:hover, &:active{
+    color: $link-focus;
+    outline: none;
+    text-decoration: none;
+  }
+}
+
+
+h4 {
+  font-size: 1.5rem;
+  line-height: 1.5;
+}
+
+h3 {
+  font-size: 2.5rem;
+  line-height: 1.36;
+}
+
+h1{
+    font-size: $font-size + 6;
+    line-height:1.5;
+    font-weight:bold;
+}
+
+h2{ font-size: $font-size + 4 }
+
+h1, h2{
+    line-height:1.5;
+    font-weight:bold;
+}
+
+.meta{
+    font-size: $font-size - 4;
+    font-weight:500;
+}
+
+.code-like-font {
+  color: #aaa;
+  font-family: $code-font;
+  font-size: 80%;
+}
+
+img,
+.logo{
+    height: auto;
+    max-width: 100%;
+}
+
+pre{
+    display: block;
+    padding: 9.5px;
+    margin: 0 0 10px;
+    font-size: $code-font-size;
+    line-height: $code-line-height;
+    word-break: break-all;
+    word-wrap: break-word;
+    white-space: pre;
+    white-space: pre-wrap;
+    background-color: $code-background-color;
+    border: 1px solid $code-border-color;
+    border-radius: $border-radius;
+}
+
+button{
+    background: $angular-translate-blue;
+    border: 0;
+    color: #fff;
+    box-shadow: none;
+    text-shadow: none;
+    display: inline-block;
+    padding: 4px 12px;
+    margin-bottom: 0;
+    font-size: $font-size;
+    line-height: $line-height;
+    text-align: center;
+    &:hover{
+         background: $darker-blue;
+    }
+}
+
+blockquote {
+    border: 0;
+    padding: 0;
+    position: relative;
+    margin-top: 12px;
+    background: $code-background-color;
+    padding: 20px;
+    border-radius: $border-radius * 2;
+    &:before {
+        content: "“";
+        position: absolute;
+        font-size: 125px;
+        top: 14px;
+        left: -15px;
+        color: $angular-translate-blue;
+        letter-spacing: -10px;
+    }
+}

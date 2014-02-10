@@ -1,0 +1,10 @@
+$total-columns: 12;    // a 12-column grid
+$column-width : 6rem;  // each column is 4em wide - 6rem
+$gutter-width : 2rem;  // 1em gutters between columns 2rem
+$grid-padding : 0;     //$gutter-width;  // grid-padding equal to gutters
+
+$row-height: 2.4rem;
+
+$medium-columns: 8;
+$large-columns : 16;
+$rem-with-px-fallback: false;

@@ -1,13 +1,25 @@
 ---
 layout: default
-title: Your New Jekyll Site
+title: angular-translate Blog
 ---
 
-<div id="home">
-  <h1>Blog Posts</h1>
-  <ul class="posts">
-    {% for post in site.posts %}
-      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+
+   {% include themes/angular-translate/sidebar.html  %}
+
+  <section class="posts">
+    {% for post in paginator.posts %}
+    <article>
+      <div class="post-data-container">
+        <div class="meta-container">
+          <span class="meta">{{ post.date | date_to_string }}</span>
+          <span class="meta">{{ post.categories }}</span>
+        </div>
+        <a class="title" href="{{ post.url }}">{{ post.title | truncatewords:17 }}</a>
+        <p>{{ post.content | strip_html | truncatewords:20}}</p>
+      </div>
+    </article>
     {% endfor %}
-  </ul>
-</div>
+
+ {% include themes/angular-translate/paginator.html %}
+
+  </section>

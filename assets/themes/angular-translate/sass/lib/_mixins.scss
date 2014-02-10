@@ -1,0 +1,68 @@
+/** Organisation of this file
+
+1) Base rules
+2) Layout rules
+3) Module rules
+4) State rules
+
+****/
+
+/*********** Base rules ***********/
+
+/** em -> rem convertion **/
+
+// Taken from foundation
+@function strip-unit($num) {
+    @return $num / ($num * 0 + 1);
+}
+
+
+@mixin font-size($size:1.5, $line: $size * 1.6){
+    font-size:   ($size * 10) + px;
+    line-height: ($line * 10) + px;
+    font-size:   $size + rem;
+    line-height: $line + rem;
+}
+
+@function convert-to-rem($value, $base-value: $rem-base)  {
+  $value: strip-unit($value) / strip-unit($base-value) * 1rem;
+  @if ($value == 0rem) { $value: 0; } // Turn 0rem into 0
+  @return $value;
+}
+
+/* the values must be the px equivalent */
+@mixin rem-fallback($property,$values, $base-value: $base-font-size) {
+  $max: length($values);
+  $pxValues: ();
+  @for $i from 1 through $max {
+    $pxValues: append($pxValues, ( ( strip-unit(nth($values, $i)) )  ) * 1px );
+  }
+
+  $remValues: ();
+  @for $i from 1 through $max {
+    $remValues: append($remValues, convert-to-rem(nth($values, $i), $base-value));
+  }
+  #{$property}: $pxValues;
+  #{$property}: $remValues;
+
+}
+
+
+/* Rewrite apply-container from sussy/grid line 50
+ to not add unnecessary padding*/
+@mixin apply-container( $columns  : $total-columns){
+  @include pie-clearfix;
+  @include set-container-width($columns);
+  margin: { left: auto; right: auto; }
+}
+
+
+
+@mixin font-awesome{
+    font:{
+        family: FontAwesome;
+        weight: normal;
+        style: normal;
+        size: $font-size - 2;
+    }
+}
