@@ -74,10 +74,13 @@
                   display:block;
                   height:0;
                   padding:0;
-
+                  opacity:0;
+                  @include transition(all 0.1s ease);
                   &.show{
                       @include rem-fallback(padding, 10 12);
                       height:auto !important;
+                      opacity:1;
+
                   }
               }
           }
