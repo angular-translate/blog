@@ -1,9 +1,9 @@
-<!Doctype html>
+<!doctype html>
 <html>
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <meta name="robots" content="{{page.index}}INDEX,{{page.follow}}FOLLOW" />
+        <meta name="robots" content="{{index.page}}INDEX,{{page.follow}}FOLLOW" />
         {% if page.date %}
         <meta http-equiv="date" content="{{page.date |date: '%A, %d  %Y %H:%M:%S GMT'}}" />
         {% endif %}
@@ -26,7 +26,7 @@
       <header class="header">
         <div class="navbar">
               <a class="logo header-item" href="/">
-                <img class="pull-left" src="http://pascalprecht.github.io/angular-translate/docs/en/img/identity/logo/angular-translate-alternative/angular-translate_alternative_small2.png">
+                <img class="pull-left" src="{{ site.baseurl }}{{ ASSET_PATH }}/img/angular-translate_alternative_small215x29.png">
               </a>
               <ul class="nav header-item desktop">
                 <li>

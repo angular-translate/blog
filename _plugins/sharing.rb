@@ -2,10 +2,8 @@ module Jekyll
     module ShareButtonsFilter
       def share_buttons url
         full_url = @context.registers[:site].config['url']
-
         <<-HTML
           <div class="buttons">
-
             <a href="https://twitter.com/share"
               class="twitter-share-button"
               data-url="#{full_url}"
