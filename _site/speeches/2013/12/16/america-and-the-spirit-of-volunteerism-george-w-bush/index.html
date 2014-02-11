@@ -450,7 +450,7 @@ var bars = document.querySelector('.bars');
 
 if (bars.offsetWidth !== 0 && bars.offsetHeight !==0 ){}
 
- bars.addEventListener('click', function (event) {
+ bars.addEventListener('touchstart', function (event) {
         var menuItems = event.target.parentNode.querySelectorAll('li');
         forEach.call(menuItems, function ( elem ){
             toggleClass(elem);
@@ -460,6 +460,8 @@ if (bars.offsetWidth !== 0 && bars.offsetHeight !==0 ){}
     });
 
  document.addEventListener("touchstart", function(){}, true);
+
+// bars.addEventListener("touchstart", function(){}, true);
 
       </script>
         <div id="fb-root"></div>
