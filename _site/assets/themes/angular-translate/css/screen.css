@@ -2870,13 +2870,14 @@ footer .l-container a {
   width: 4rem;
   height: 4rem;
   cursor: pointer;
-  text-align: right;
+  text-align: center;
   float: right;
-  margin-top: -4rem;
-  margin-right: 2rem;
+  margin-top: -5rem;
+  margin-right: 1rem;
+  padding-top: 1rem;
   -webkit-tap-highlight-color: transparent;
 }
-/* line 60, ../sass/layout/_main-nav.scss */
+/* line 61, ../sass/layout/_main-nav.scss */
 .nav.mobile .bars:before {
   font-family: FontAwesome;
   font-weight: normal;
@@ -2885,7 +2886,7 @@ footer .l-container a {
   text-decoration: inherit;
   content: "\f0c9";
 }
-/* line 68, ../sass/layout/_main-nav.scss */
+/* line 69, ../sass/layout/_main-nav.scss */
 .nav.mobile li {
   text-align: center;
   height: 0;
@@ -2895,7 +2896,7 @@ footer .l-container a {
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
-/* line 73, ../sass/layout/_main-nav.scss */
+/* line 74, ../sass/layout/_main-nav.scss */
 .nav.mobile li a {
   display: block;
   height: 0;
@@ -2906,37 +2907,37 @@ footer .l-container a {
   -webkit-transition: all 0.1s ease;
   transition: all 0.1s ease;
 }
-/* line 79, ../sass/layout/_main-nav.scss */
+/* line 80, ../sass/layout/_main-nav.scss */
 .nav.mobile li a.show {
   padding: 10px 12px;
   padding: 1rem 1.2rem;
   height: auto !important;
   opacity: 1;
 }
-/* line 89, ../sass/layout/_main-nav.scss */
+/* line 90, ../sass/layout/_main-nav.scss */
 .nav.desktop {
   display: none;
 }
 @media (min-width: 56.28938em) {
-  /* line 89, ../sass/layout/_main-nav.scss */
+  /* line 90, ../sass/layout/_main-nav.scss */
   .nav.desktop {
     display: inline-flex;
     float: left;
     float: left;
   }
 }
-/* line 97, ../sass/layout/_main-nav.scss */
+/* line 98, ../sass/layout/_main-nav.scss */
 .nav.desktop li {
   line-height: 61px;
   line-height: 6.1rem;
   padding: 0;
 }
-/* line 100, ../sass/layout/_main-nav.scss */
+/* line 101, ../sass/layout/_main-nav.scss */
 .nav.desktop li a {
   padding: 23px 12px;
   padding: 2.3rem 1.2rem;
 }
-/* line 106, ../sass/layout/_main-nav.scss */
+/* line 107, ../sass/layout/_main-nav.scss */
 .nav.right {
   float: right;
 }
