@@ -141,8 +141,12 @@ if (bars.offsetWidth !== 0 && bars.offsetHeight !==0 ){}
         var menuItems = event.target.parentNode.querySelectorAll('li');
         forEach.call(menuItems, function ( elem ){
             toggleClass(elem);
+            toggleClass(elem.querySelector('a'));
         });
+
     });
+
+ document.addEventListener("touchstart", function(){}, true);
 
       </script>
        {% include themes/angular-translate/sharing.html %}

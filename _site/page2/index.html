@@ -242,9 +242,9 @@
         </a>
       </li>
       <li class="item">
-        <a href="http://github.com/sgara">
-          <img height="40" width="40" src="https://secure.gravatar.com/avatar/076e1a1b2f8ff489387fc5b1a7bd44f4?s=40">
-          Stéphane Garagnani
+        <a href="https://github.com/firehist">
+          <img height="40" width="40" src="https://secure.gravatar.com/avatar/7c385bfa009587015f6b16e3e4ab5d53?d=https%3A%2F%2Fidenticons.github.com%2F403ca5ef25d69069672ac902c1c46268.png&r=x&s=40">
+         Benjamin Longearet
       </a>
       </li>
       <li class="item">
@@ -252,9 +252,19 @@
           Max Prichinenko
         </a>
       </li>
+       <li class="item">
+        <a href="https://github.com/DanielaValero"><img height="40" width="40" src="https://secure.gravatar.com/avatar/88c25c37e0293da177f803a97ebe660b?d=https%3A%2F%2Fidenticons.github.com%2F3f200f1c93427f0dda4bef74ecbbbb78.png&r=x&s=40">
+          Daniela Valero
+        </a>
+      </li>
+      <li class="item">
+        <a href="https://github.com/tspaeth"><img height="40" width="40" src="https://secure.gravatar.com/avatar/cbda24fa073ac64d89d48d498a07a262?d=https%3A%2F%2Fidenticons.github.com%2F30dc147afc030628337bdbb21d052c12.png&r=x&s=40">
+          Thorsten
+        </a>
+      </li>
       <li class="item">
         and many
-        <a href="http://github.com/PascalPrecht/angular-translate/contributors">
+        <a href="https://github.com/PascalPrecht/angular-translate/graphs/contributors">
           others
         </a>
       </li>
@@ -393,8 +403,12 @@ if (bars.offsetWidth !== 0 && bars.offsetHeight !==0 ){}
         var menuItems = event.target.parentNode.querySelectorAll('li');
         forEach.call(menuItems, function ( elem ){
             toggleClass(elem);
+            toggleClass(elem.querySelector('a'));
         });
+
     });
+
+ document.addEventListener("touchstart", function(){}, true);
 
       </script>
         <div id="fb-root"></div>

@@ -52,9 +52,11 @@
               width:4rem;
               height:4rem;
               cursor:pointer;
+              text-align: right;
               float: right;
               margin-top: -4rem;
-              margin-right: 3rem;
+              margin-right: 2rem;
+              -webkit-tap-highlight-color: rgba(0,0,0,0);
               &:before{
                   @include font-awesome;
                   text-decoration: inherit;
@@ -70,7 +72,13 @@
               @include transition(all 0.5s ease);
               a{
                   display:block;
-                  @include rem-fallback(padding, 10 12);
+                  height:0;
+                  padding:0;
+
+                  &.show{
+                      @include rem-fallback(padding, 10 12);
+                      height:auto !important;
+                  }
               }
           }
     }
